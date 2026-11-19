@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YT No Shorts",
+  "version": "1.0.0",
+  "description": "Убирает YouTube Shorts с youtube.com и m.youtube.com и открывает шортсы в обычном плеере.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": { "id": "yt-no-shorts@local", "strict_min_version": "121.0" },
+    "gecko_android": { "strict_min_version": "121.0" }
+  }
+}
